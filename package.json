@@ -1,0 +1,23 @@
+{
+  "name": "javascriptdeepdive",
+  "version": "1.0.0",
+  "description": "Practice examples in Modern Javascript DeepDive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/SeungrokYoon/modernJsDeepDive.git",
+  "keywords": [],
+  "author": "Seungrok <sonicrok93@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SeungrokYoon/modernJsDeepDive/issues"
+  },
+  "homepage": "https://github.com/SeungrokYoon/modernJsDeepDive#readme",
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.6.0",
+    "prettier": "^2.8.4"
+  },
+  "private": false
+}
