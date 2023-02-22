@@ -1,0 +1,1 @@
+export const getLorem = (z) => {}
