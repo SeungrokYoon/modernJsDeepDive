@@ -12,11 +12,11 @@
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": "error",
     // override configuration set by extending "eslint:recommended"
     "no-empty": "warn",
     "no-cond-assign": ["error", "always"],
     "no-console": "error",
+    "multiline-comment-style": ["error", "starred-block"],
     // disable rules from base configurations
     "for-direction": "off",
     "line-comment-position": ["error", { "position": "above" }],
