@@ -1,13 +1,29 @@
 {
   "root": true,
-  "extends": ["eslint:recommended", "prettier"],
-  "plugins": ["plugin:prettier/recommended"],
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "plugins": ["jest", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
   "rules": {
+    "prettier/prettier": "error",
     // override configuration set by extending "eslint:recommended"
     "no-empty": "warn",
     "no-cond-assign": ["error", "always"],
-
+    "no-console": "error",
     // disable rules from base configurations
-    "for-direction": "off"
+    "for-direction": "off",
+    "line-comment-position": ["error", { "position": "above" }],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
   }
 }
