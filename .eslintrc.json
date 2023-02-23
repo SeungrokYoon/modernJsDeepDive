@@ -17,6 +17,7 @@
     "no-cond-assign": ["error", "always"],
     "no-console": "error",
     "multiline-comment-style": ["error", "starred-block"],
+    "camelcase": "error",
     // disable rules from base configurations
     "for-direction": "off",
     "line-comment-position": ["error", { "position": "above" }],
