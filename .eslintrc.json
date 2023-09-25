@@ -15,9 +15,10 @@
     // override configuration set by extending "eslint:recommended"
     "no-empty": "warn",
     "no-cond-assign": ["error", "always"],
-    "no-console": "warn",
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
     "multiline-comment-style": ["error", "starred-block"],
     "camelcase": "error",
+    "no-unused-vars": "warn",
     // disable rules from base configurations
     "for-direction": "off",
     "line-comment-position": ["error", { "position": "above" }],
