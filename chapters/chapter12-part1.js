@@ -15,6 +15,8 @@ const variable = function add(x, y) {
   return x + y
 }
 
+console.info(variable)
+
 /**
  * Functions can be optionally named.
  *  Named one is called 'named function',
@@ -56,27 +58,35 @@ const multiply = new Function('x', 'y', 'return x*y')
 const arrow = (x, y) => x + y
 
 function foo() {
-  console.log('foo')
+  console.info('foo')
 }
 
 foo()
 
 const a = function bar() {
-  console.log('bar')
+  console.info('bar')
 }
 
-//bar is not defined <- why? named function literal is interpreted differently by context.
-bar()
+/*
+ * bar() => bar is not defined <- why? named function literal is interpreted differently by context.
+ *
+ */
 
 // function name is valid only inside the function
 const add3 = function foo3(x, y) {
-  //foo3(x+1, y+1) possible since function name is valid only inside the function
+  /*
+   * foo3(x+1, y+1) possible since function name is valid only inside the function
+   * foo3(x + 1, y + 1)
+   */
   return x + y
 }
 //valid
 add3(2, 5)
-//foo3 is not defined
-foo3()
+const sum = add3(3, 6)
+
+//invalid : foo3 is not defined
+
+//foo3()
 
 /**
  * Function definition by declaration and function expression are different
@@ -86,12 +96,17 @@ foo3()
  *
  */
 
-console.dir(declaredFunction)
-console.dir(expressedFunction)
+console.info(declaredFunction)
+console.info(expressedFunction)
 
-console.log(declaredFunction(2, 5))
-console.log(expressedFunction(2, 5))
+console.info(declaredFunction(2, 5))
+console.info(expressedFunction(2, 5))
 
+/**
+ * In the above console statement, we can reference declaredFunction although it is called before definition line.
+ * However, we cannot reference expressedFunction since it is an expression, which requires validation(calculation).
+ *
+ */
 function declaredFunction(x, y) {
   return x + y
 }
